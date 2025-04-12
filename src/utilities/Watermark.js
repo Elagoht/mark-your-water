@@ -3,7 +3,7 @@ import { createElement } from 'react';
 import sharp from 'sharp';
 
 class Watermark {
-  public static async getImageSize(imageUrl: string) {
+  static async getImageSize(imageUrl) {
     try {
       const res = await fetch(imageUrl, {
         headers: {
@@ -41,11 +41,7 @@ class Watermark {
     }
   }
 
-  public static async generateReactComponent(
-    imageUrl: string,
-    size: { width: number, height: number },
-    watermarkText: string,
-  ): Promise<React.ReactElement> {
+  static async generateReactComponent(imageUrl, size, watermarkText) {
     return createElement('div', {
       style: {
         width: `${size.width}px`,
@@ -85,10 +81,7 @@ class Watermark {
     ]);
   }
 
-  public static async generateImageResponse(
-    imageUrl: string,
-    watermarkText: string,
-  ) {
+  static async generateImageResponse(imageUrl, watermarkText) {
     const size = await this.getImageSize(imageUrl);
     const component = await this.generateReactComponent(
       imageUrl,

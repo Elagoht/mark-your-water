@@ -1,7 +1,6 @@
-import { NextRequest } from "next/server";
-import Watermark from "../utilities/Watermark";
+import Watermark from "@/utilities/Watermark";
 
-export const GET = async (request: NextRequest) => {
+export const GET = async (request) => {
   try {
     const { searchParams } = request.nextUrl;
 
