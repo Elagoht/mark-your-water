@@ -1,5 +1,7 @@
 # Watermark Generator With Next.js
 
+> IMPORTANT NOTE: DO NOT WATERMARK IMAGES YOU DO NOT OWN.
+
 Generate watermarked images. Nothing more, nothing less.
 
 > Disclaimer: Source images must be available publicly on cross-origin. Webp is not supported.
